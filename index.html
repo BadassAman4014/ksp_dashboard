@@ -250,7 +250,7 @@
                 <path d="M12.6,8.7,11.5,6.5a1.05,1.05,0,0,0-.9-.5H4.4a1.05,1.05,0,0,0-.9.5L2.4,8.7,1.16,9.852a.5.5,0,0,0-.16.366V14.5a.5.5,0,0,0,.5.5h2c.2,0,.5-.2.5-.4V14h7v.5c0,.2.2.5.4.5h2.1a.5.5,0,0,0,.5-.5V10.218a.5.5,0,0,0-.16-.366ZM4.5,7h6l1,2h-8ZM5,11.6c0,.2-.3.4-.5.4H2.4c-.2,0-.4-.3-.4-.5V10.4c.1-.3.3-.5.6-.4l2,.4c.2,0,.4.3.4.5Zm8-.1c0,.2-.2.5-.4.5H10.5c-.2,0-.5-.2-.5-.4v-.7c0-.2.2-.5.4-.5l2-.4c.3-.1.5.1.6.4ZM8,4H7L6,0H9ZM1.1,1.8,3.7.3l1.1,4L4,4.7ZM11.3.3l2.6,1.5L11,4.8l-.9-.5Z"/>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">Accident Analysis</span>
+            <span class="nav-link-text ms-1">Accident Alert System</span>
           </a>
         </li>
 
@@ -902,135 +902,135 @@ new Chart(ctx2, {
   });
     
 
-// $(document).ready(function(){
-//   var targetNumber1 = 278101;
-//   var targetPercentage1 = 4;
-
-//   var targetNumber2 = 43721;
-//   var targetPercentage2 = 29;
-
-//   var targetNumber3 = 158285;
-//   var targetPercentage3 = 14;
-
-//   var targetNumber4 = 63740;
-//   var targetPercentage4 = 15;
-
-//   var duration = 2000;
-//   var interval = 50;
-
-//   var numberIncrement1 = Math.ceil(targetNumber1 / (duration / interval));
-//   var percentageIncrement1 = targetPercentage1 / (duration / interval);
-
-//   var numberIncrement2 = Math.ceil(targetNumber2 / (duration / interval));
-//   var percentageIncrement2 = targetPercentage2 / (duration / interval);
-
-//   var numberIncrement3 = Math.ceil(targetNumber3 / (duration / interval));
-//   var percentageIncrement3 = targetPercentage3 / (duration / interval);
-
-//   var numberIncrement4 = Math.ceil(targetNumber4 / (duration / interval));
-//   var percentageIncrement4 = targetPercentage4 / (duration / interval);
-
-//   function updateNumber1(currentNumber) {
-//     $('#number1').text(currentNumber.toLocaleString());
-//   }
-
-//   function updatePercentage1(currentPercentage) {
-//     $('#percentage1').text("+" + currentPercentage.toFixed(0) + "%");
-//   }
-
-//   function updateNumber2(currentNumber) {
-//     $('#number2').text(currentNumber.toLocaleString());
-//   }
-
-//   function updatePercentage2(currentPercentage) {
-//     $('#percentage2').text("+" + currentPercentage.toFixed(0) + "%");
-//   }
-
-//   function updateNumber3(currentNumber) {
-//     $('#number3').text(currentNumber.toLocaleString());
-//   }
-
-//   function updatePercentage3(currentPercentage) {
-//     $('#percentage3').text("+" + currentPercentage.toFixed(0) + "%");
-//   }
-
-//   function updateNumber4(currentNumber) {
-//     $('#number4').text(currentNumber.toLocaleString());
-//   }
-
-//   function updatePercentage4(currentPercentage) {
-//     $('#percentage4').text("+" + currentPercentage.toFixed(0) + "%");
-//   }
-
-//   function animateNumberAndPercentage1() {
-//     var currentNumber = 0;
-//     var currentPercentage = 0;
-//     var timer = setInterval(function() {
-//       currentNumber += numberIncrement1;
-//       currentPercentage += percentageIncrement1;
-//       if (currentNumber >= targetNumber1) {
-//         currentNumber = targetNumber1;
-//         currentPercentage = targetPercentage1;
-//         clearInterval(timer);
-//       }
-//       updateNumber1(currentNumber);
-//       updatePercentage1(currentPercentage);
-//     }, interval);
-//   }
-
-//   function animateNumberAndPercentage2() {
-//     var currentNumber = 0;
-//     var currentPercentage = 0;
-//     var timer = setInterval(function() {
-//       currentNumber += numberIncrement2;
-//       currentPercentage += percentageIncrement2;
-//       if (currentNumber >= targetNumber2) {
-//         currentNumber = targetNumber2;
-//         currentPercentage = targetPercentage2;
-//         clearInterval(timer);
-//       }
-//       updateNumber2(currentNumber);
-//       updatePercentage2(currentPercentage);
-//     }, interval);
-//   }
-
-//   function animateNumberAndPercentage3() {
-//     var currentNumber = 0;
-//     var currentPercentage = 0;
-//     var timer = setInterval(function() {
-//       currentNumber += numberIncrement3;
-//       currentPercentage += percentageIncrement3;
-//       if (currentNumber >= targetNumber3) {
-//         currentNumber = targetNumber3;
-//         currentPercentage = targetPercentage3;
-//         clearInterval(timer);
-//       }
-//       updateNumber3(currentNumber);
-//       updatePercentage3(currentPercentage);
-//     }, interval);
-//   }
-
-//   function animateNumberAndPercentage4() {
-//     var currentNumber = 0;
-//     var currentPercentage = 0;
-//     var timer = setInterval(function() {
-//       currentNumber += numberIncrement4;
-//       currentPercentage += percentageIncrement4;
-//       if (currentNumber >= targetNumber4) {
-//         currentNumber = targetNumber4;
-//         currentPercentage = targetPercentage4;
-//         clearInterval(timer);
-//       }
-//       updateNumber4(currentNumber);
-//       updatePercentage4(currentPercentage);
-//     }, interval);
-//   }
-
-//   animateNumberAndPercentage1();
-//   animateNumberAndPercentage2();
-//   animateNumberAndPercentage3();
-//   animateNumberAndPercentage4();
-// });
+  $(document).ready(function(){
+    var targetNumber1 = 278101;
+    var targetPercentage1 = 4;
+  
+    var targetNumber2 = 43721;
+    var targetPercentage2 = 29;
+  
+    var targetNumber3 = 158285;
+    var targetPercentage3 = 14;
+  
+    var targetNumber4 = 63740;
+    var targetPercentage4 = 15;
+  
+    var duration = 2000;
+    var interval = 50;
+  
+    var numberIncrement1 = Math.ceil(targetNumber1 / (duration / interval));
+    var percentageIncrement1 = targetPercentage1 / (duration / interval);
+  
+    var numberIncrement2 = Math.ceil(targetNumber2 / (duration / interval));
+    var percentageIncrement2 = targetPercentage2 / (duration / interval);
+  
+    var numberIncrement3 = Math.ceil(targetNumber3 / (duration / interval));
+    var percentageIncrement3 = targetPercentage3 / (duration / interval);
+  
+    var numberIncrement4 = Math.ceil(targetNumber4 / (duration / interval));
+    var percentageIncrement4 = targetPercentage4 / (duration / interval);
+  
+    function updateNumber1(currentNumber) {
+      $('#number1').text(currentNumber.toLocaleString());
+    }
+  
+    function updatePercentage1(currentPercentage) {
+      $('#percentage1').text("+" + currentPercentage.toFixed(0) + "%");
+    }
+  
+    function updateNumber2(currentNumber) {
+      $('#number2').text(currentNumber.toLocaleString());
+    }
+  
+    function updatePercentage2(currentPercentage) {
+      $('#percentage2').text("+" + currentPercentage.toFixed(0) + "%");
+    }
+  
+    function updateNumber3(currentNumber) {
+      $('#number3').text(currentNumber.toLocaleString());
+    }
+  
+    function updatePercentage3(currentPercentage) {
+      $('#percentage3').text("+" + currentPercentage.toFixed(0) + "%");
+    }
+  
+    function updateNumber4(currentNumber) {
+      $('#number4').text(currentNumber.toLocaleString());
+    }
+  
+    function updatePercentage4(currentPercentage) {
+      $('#percentage4').text("+" + currentPercentage.toFixed(0) + "%");
+    }
+  
+    function animateNumberAndPercentage1() {
+      var currentNumber = 0;
+      var currentPercentage = 0;
+      var timer = setInterval(function() {
+        currentNumber += numberIncrement1;
+        currentPercentage += percentageIncrement1;
+        if (currentNumber >= targetNumber1) {
+          currentNumber = targetNumber1;
+          currentPercentage = targetPercentage1;
+          clearInterval(timer);
+        }
+        updateNumber1(currentNumber);
+        updatePercentage1(currentPercentage);
+      }, interval);
+    }
+  
+    function animateNumberAndPercentage2() {
+      var currentNumber = 0;
+      var currentPercentage = 0;
+      var timer = setInterval(function() {
+        currentNumber += numberIncrement2;
+        currentPercentage += percentageIncrement2;
+        if (currentNumber >= targetNumber2) {
+          currentNumber = targetNumber2;
+          currentPercentage = targetPercentage2;
+          clearInterval(timer);
+        }
+        updateNumber2(currentNumber);
+        updatePercentage2(currentPercentage);
+      }, interval);
+    }
+  
+    function animateNumberAndPercentage3() {
+      var currentNumber = 0;
+      var currentPercentage = 0;
+      var timer = setInterval(function() {
+        currentNumber += numberIncrement3;
+        currentPercentage += percentageIncrement3;
+        if (currentNumber >= targetNumber3) {
+          currentNumber = targetNumber3;
+          currentPercentage = targetPercentage3;
+          clearInterval(timer);
+        }
+        updateNumber3(currentNumber);
+        updatePercentage3(currentPercentage);
+      }, interval);
+    }
+  
+    function animateNumberAndPercentage4() {
+      var currentNumber = 0;
+      var currentPercentage = 0;
+      var timer = setInterval(function() {
+        currentNumber += numberIncrement4;
+        currentPercentage += percentageIncrement4;
+        if (currentNumber >= targetNumber4) {
+          currentNumber = targetNumber4;
+          currentPercentage = targetPercentage4;
+          clearInterval(timer);
+        }
+        updateNumber4(currentNumber);
+        updatePercentage4(currentPercentage);
+      }, interval);
+    }
+  
+    animateNumberAndPercentage1();
+    animateNumberAndPercentage2();
+    animateNumberAndPercentage3();
+    animateNumberAndPercentage4();
+  });
 
 $(document).ready(function(){
   // Function to fetch CSV data asynchronously
