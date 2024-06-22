@@ -9,6 +9,11 @@
   <title>
     KSP Dashboard
   </title>
+  <!--Notification-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <script src="https://unpkg.com/notificationapi-js-client-sdk@4.1.0/dist/notificationapi-js-client-sdk.js"></script>
+  <link href="noti.css" rel="stylesheet" />
+  <!-- <link href="https://unpkg.com/notificationapi-js-client-sdk@4.1.0/dist/styles.css" rel="stylesheet" /> -->
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <!-- Nucleo Icons -->
@@ -16,7 +21,7 @@
   <link href="nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="nucleo-svg.css" rel="stylesheet" />
+
   <!-- CSS Files -->
   <link id="pagestyle" href="soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -28,6 +33,17 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <style>
+  #notificationContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#notifyBtn {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
   .swiper-container {
   width: 400px; /* Set your desired width */
   height: 180px; /* Set your desired height */
@@ -367,69 +383,12 @@
                 <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
               </a>
             </li>
-            <li class="nav-item dropdown pe-2 d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa fa-bell cursor-pointer"></i>
-              </a>
-              <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
-                <li class="mb-2">
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <div class="d-flex py-1">
-                      <div class="my-auto">
-                        <img src="https://static.vecteezy.com/system/resources/previews/000/583/611/original/location-icon-vector.jpg" class="avatar avatar-sm  me-3 ">
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          <span class="font-weight-bold">Karanataka District</span> New Blackspots
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          13 minutes ago
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li class="mb-2">
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <div class="d-flex py-1">
-                      <div class="my-auto">
-                        <img src="https://th.bing.com/th/id/OIP.R-7BdDMhiiPWIXwWam3_JwHaHx?rs=1&pid=ImgDetMain" class="avatar avatar-sm bg-gradient-dark  me-3 ">
-                      </div>
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          <span class="font-weight-bold">13 New Accidents</span> reported by AW cabinet
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          1 day
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
-                    <div class="d-flex py-1">
-                      
-                        <div class="my-auto">
-                          <img src="https://th.bing.com/th/id/OIP.8_MSMPSXMnWhYt2YFlG-8QHaHa?rs=1&pid=ImgDetMain" class="avatar avatar-sm  me-3 ">
-                        </div>
-                      
-                      <div class="d-flex flex-column justify-content-center">
-                        <h6 class="text-sm font-weight-normal mb-1">
-                          New Features Added
-                        </h6>
-                        <p class="text-xs text-secondary mb-0">
-                          <i class="fa fa-clock me-1"></i>
-                          15 days ago
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </li>
+            <li>
+              <div id="notificationContainer">
+                  <i id="notifyIcon" class="fa fa-bell notification-icon"></i>
+              </div>
+          </li>
+            
           </ul>
         </div>
       
@@ -901,6 +860,17 @@ new Chart(ctx2, {
     },
   });
     
+  //notifcation 
+  const notificationapi = new NotificationAPI({
+    clientId: '15d3sckqo6fuadac2bm35u8rkb',
+    userId: 'gimijo8225@luravell.com'
+});
+
+// Show the notification immediately
+notificationapi.showInApp({
+    root: 'notificationContainer',
+    popupPosition: 'bottomLeft'
+});
 
   $(document).ready(function(){
     var targetNumber1 = 278101;
